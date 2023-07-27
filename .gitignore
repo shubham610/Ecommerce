@@ -1,0 +1,8 @@
+node_modules/
+frontend/config/
+frontend/scripts/
+dist/
+backend/config/config.env
+.DS_Store
+coverage/
+.vscode/
