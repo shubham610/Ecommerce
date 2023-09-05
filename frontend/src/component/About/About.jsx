@@ -10,25 +10,24 @@ const About = () => {
         <div className="textContainer">
           <h1 className="aboutHeading">About Us</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in
-            mattis metus. Quisque ullamcorper arcu at risus posuere, mattis
-            blandit diam suscipit. Ut porta erat purus, non imperdiet orci
-            tristique ut. Suspendisse porta tristique magna et sagittis. Nam
-            vehicula nisl at justo accumsan, consequat interdum leo cursus. Nunc
-            tempus nulla eget lacinia posuere. Vivamus pellentesque quam a ante
-            viverra tincidunt. Suspendisse pharetra lorem ultricies nibh
-            scelerisque accumsan.
+            Welcome to Shopee, where shopping meets convenience and style. We
+            are your one-stop destination for all ee things fashion, home decor,
+            electronics, and more. At Shopp, our mission is to provide you with
+            a seamless and enjoyable online shopping experience, whether you're
+            browsing the latest fashion trends, upgrading your home, or
+            searching for that perfect gift.
           </p>
           <p>
-            Nam sed ex erat. Mauris faucibus odio velit. Pellentesque vulputate
-            lacinia molestie. Integer enim tellus, luctus sit amet mattis et,
-            cursus in ante. Mauris pretium felis turpis, nec elementum dolor
-            rhoncus et. Mauris id viverra eros, eu pretium orci. Sed sagittis
-            rutrum faucibus. Aenean fringilla mollis vestibulum. Nam ultrices
-            neque sed aliquam cursus. Etiam lacus arcu, luctus condimentum
-            aliquet id, ultricies sit amet ante. Pellentesque non lobortis odio,
-            vitae hendrerit metus. Quisque in ligula vel justo aliquam
-            tristique.
+            Founded with a passion for innovation and a commitment to customer
+            satisfaction, Shopee is dedicated to bringing you a curated
+            selection of high-quality products from trusted brands. Our
+            user-friendly interface, intuitive search features, and secure
+            payment options ensure that you can shop with confidence. We're
+            constantly evolving to stay ahead of the curve, so you can explore
+            new arrivals, discover exclusive deals, and stay connected with the
+            latest updates. Thank you for choosing Shopee as your online
+            shopping destination, and we look forward to helping you find the
+            perfect items to enhance your lifestyle.
           </p>
         </div>
         <div className="imagesContainer">
