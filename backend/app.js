@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const errorMiddleware = require("../backend/middleware/error");
 const fileUpload = require("express-fileupload");
-
+const cors = require("cors");
 const dotenv = require("dotenv");
 
 dotenv.config({ path: "backend/config/config.env" });
@@ -18,6 +18,7 @@ const product = require("./routes/productRoute");
 const user = require("../backend/routes/userRoute");
 const order = require("../backend/routes/orderRoute");
 const payment = require("../backend/routes/paymentRoute");
+app.use(cors());
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
