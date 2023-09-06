@@ -18,7 +18,13 @@ const product = require("./routes/productRoute");
 const user = require("../backend/routes/userRoute");
 const order = require("../backend/routes/orderRoute");
 const payment = require("../backend/routes/paymentRoute");
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://funny-fenglisu-d9140d.netlify.app/",
+    credentials: true,
+  })
+);
+app.set("trust proxy", 1);
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);

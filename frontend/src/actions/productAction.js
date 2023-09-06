@@ -40,7 +40,7 @@ export const getProduct =
       if (category) {
         link = `${process.env.REACT_APP_API_HOST}/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
       }
-      const { data } = await axios.get(link);
+      const { data } = await axios.get(link, { withCredentials: true });
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
         payload: data,
@@ -58,6 +58,7 @@ export const getAdminProduct = () => async (dispatch) => {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
     const { data } = await axios.get(
       `${process.env.REACT_APP_API_HOST}/api/v1/admin/products`,
+      { withCredentials: true },
     );
     dispatch({
       type: ADMIN_PRODUCT_SUCCESS,
@@ -77,6 +78,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 
     const { data } = await axios.get(
       `${process.env.REACT_APP_API_HOST}/api/v1/product/${id}`,
+      { withCredentials: true },
     );
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -105,6 +107,7 @@ export const newReview = (reviewData) => async (dispatch) => {
       `${process.env.REACT_APP_API_HOST}/api/v1/review`,
       reviewData,
       config,
+      { withCredentials: true },
     );
     dispatch({
       type: NEW_REVIEW_SUCCESS,
@@ -129,6 +132,7 @@ export const createProduct = (productData) => async (dispatch) => {
       `${process.env.REACT_APP_API_HOST}/api/v1/admin/product/new`,
       productData,
       config,
+      { withCredentials: true },
     );
     dispatch({
       type: NEW_PRODUCT_SUCCESS,
@@ -148,6 +152,7 @@ export const deleteProduct = (id) => async (dispatch) => {
 
     const { data } = await axios.delete(
       `${process.env.REACT_APP_API_HOST}/api/v1/admin/product/${id}`,
+      { withCredentials: true },
     );
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
@@ -172,6 +177,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
       `${process.env.REACT_APP_API_HOST}/api/v1/admin/product/${id}`,
       productData,
       config,
+      { withCredentials: true },
     );
     dispatch({
       type: UPDATE_PRODUCT_SUCCESS,
@@ -190,6 +196,7 @@ export const getAllReviews = (id) => async (dispatch) => {
     dispatch({ type: ALL_REVIEW_REQUEST });
     const { data } = await axios.get(
       `${process.env.REACT_APP_API_HOST}/api/v1/reviews?id=${id}`,
+      { withCredentials: true },
     );
     dispatch({
       type: ALL_REVIEW_SUCCESS,
@@ -208,6 +215,7 @@ export const deleteReviews = (reviewId, productId) => async (dispatch) => {
     dispatch({ type: DELETE_REVIEW_REQUEST });
     const { data } = await axios.delete(
       `${process.env.REACT_APP_API_HOST}/api/v1/reviews?id=${reviewId}&productId=${productId}`,
+      { withCredentials: true },
     );
     dispatch({
       type: DELETE_REVIEW_SUCCESS,

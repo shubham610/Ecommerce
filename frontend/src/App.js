@@ -48,7 +48,8 @@ function App() {
 
   async function getStripeApiKey() {
     const { data } = await axios.get(
-      `${process.env.API_HOST}/api/v1/stripeapikey`,
+      `${process.env.REACT_APP_API_HOST}/api/v1/stripeapikey`,
+      { withCredentials: true },
     );
     setStripeApiKey(data.stripeApiKey);
   }

@@ -57,6 +57,7 @@ const Payment = () => {
         `${process.env.REACT_APP_API_HOST}/api/v1/payment/process`,
         paymentData,
         config,
+        { withCredentials: true },
       );
       const client_secret = data.client_secret;
 
