@@ -18,6 +18,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { clearErrors, createOrder } from "../../actions/orderAction";
+axios.defaults.withCredentials = true;
+
 const Payment = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
 

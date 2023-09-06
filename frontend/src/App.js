@@ -39,7 +39,7 @@ import UpdateUser from "./component/admin/UpdateUser";
 import ProductReviews from "./component/admin/ProductReviews";
 import About from "./component/About/About";
 import Contact from "./component/Contact/Contact";
-
+axios.defaults.withCredentials = true;
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const dispatch = useDispatch();

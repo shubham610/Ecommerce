@@ -52,6 +52,7 @@ export const getProduct =
       });
     }
   };
+axios.defaults.withCredentials = true;
 
 export const getAdminProduct = () => async (dispatch) => {
   try {

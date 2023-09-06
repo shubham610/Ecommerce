@@ -21,6 +21,7 @@ import {
 } from "../constants/orderConstants";
 
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 //create order
 export const createOrder = (order) => async (dispatch) => {
