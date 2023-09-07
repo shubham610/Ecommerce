@@ -16,6 +16,8 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
   for (let i = 0; i < images.length; i++) {
     const result = await cloudinary.v2.uploader.upload(images[i], {
       folder: "products",
+      width: 300,
+      crop: "scale",
     });
     imagesLink.push({
       public_id: result.public_id,
@@ -79,6 +81,8 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
   for (let i = 0; i < images.length; i++) {
     const result = await cloudinary.v2.uploader.upload(images[i], {
       folder: "products",
+      width: 300,
+      crop: "scale",
     });
     imagesLink.push({
       public_id: result.public_id,
