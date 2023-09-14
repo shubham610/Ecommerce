@@ -79,7 +79,7 @@ exports.forgotPassword = catchAsyncError(async (req, res, next) => {
   //   "host"
   // )}/api/v1/password/reset/${resetToken}`;
 
-  const resetPasswordUrl = `http://localhost:3000/password/reset/${resetToken}`;
+  const resetPasswordUrl = `https://funny-fenglisu-d9140d.netlify.app/password/reset/${resetToken}`;
   const message = `Your password reset token is:-\n\n ${resetPasswordUrl} \n\n If you have not requested this email then,please ignore it.`;
 
   try {
