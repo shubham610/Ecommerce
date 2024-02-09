@@ -24,7 +24,7 @@ const order = require("../backend/routes/orderRoute");
 const payment = require("../backend/routes/paymentRoute");
 app.use(
   cors({
-    origin: "https://funny-fenglisu-d9140d.netlify.app",
+    origin: "https://shopwithecom.netlify.app",
     credentials: true,
   })
 );
