@@ -24,7 +24,7 @@ const order = require("../backend/routes/orderRoute");
 const payment = require("../backend/routes/paymentRoute");
 app.use(
   cors({
-    origin: "https://shopwithecom.netlify.app",
+    origin: ["https://shopwithecom.netlify.app","http://localhost:3000"],
     credentials: true,
   })
 );
